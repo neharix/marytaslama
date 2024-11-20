@@ -5,7 +5,7 @@
           type="text/css"
           href="{% static 'UniWeb/home.css' %}">
 {% endblock %}
-{% block title %}Homepage{% endblock %}
+{% block title %}Baş sahypa{% endblock %}
 {% block nav %}
     <a class="navbar-brand" href="{% url 'home' %}" style="opacity: 0.8;">
         <img width="90rem" src="{% static 'UniWeb/images/logo.png' %}" alt="">
@@ -23,15 +23,8 @@
     <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item pe-1">
-                <a class="nav-link"
-                   aria-current="page"
-                   href="{% url 'placements_view' %}">
-                    <p class="h6 poppins mb-lg-2 mb-0">Placements</p>
-                </a>
-            </li>
-            <li class="nav-item pe-1">
                 <a class="nav-link" href="{% url 'admissions_view' %}">
-                    <p class="h6 poppins mb-lg-2 mb-0">Admissions</p>
+                    <p class="h6 poppins mb-lg-2 mb-0">Kabul edilişik</p>
                 </a>
             </li>
             <li class="nav-item pe-1">
@@ -42,17 +35,6 @@
             <li class="nav-item pe-1">
                 <a class="nav-link" href="{% url 'about_view' %}" aria-current="page">
                     <p class="h6 poppins mb-lg-2 mb-0">Biz barada</p>
-                </a>
-            </li>
-        </ul>
-        <ul class="navbar-nav">
-            <li>
-                <a href="{% url 'login_view' %}">
-                    <button class="btn btn-primary bg-gradient"
-                            type="button"
-                            style="border-radius: 0.5rem">
-                        <p class="h6 poppins m-0" style="font-weight: 600;">Giriş</p>
-                    </button>
                 </a>
             </li>
         </ul>
@@ -120,10 +102,10 @@
                                 <div class="col-xl-6 col-lg-6 col-md-12 col-12 page-2-text p-0">
                                     <div class="headings">
                                         <div class="container p-0">
-                                            <h1 class="poppins gradient-text">Curricular and extra curricular</h1>
+                                            <h1 class="poppins gradient-text">Institut barada</h1>
                                             <p class="inter text-muted">
                                                 <span class="h6">Biz talyplara we sport ussatlaryna ynanýarys.</span>
-                                                Okuwçylara ähli görnüşli desgalar we ajaýyp netijeler berilýär.
+                                                Talyplara ähli görnüşli desgalar we ajaýyp netijeler berilýär.
                                             </p>
                                             <div class="thick-gradient-line mt-2 mb-5"></div>
                                             <a href="{% url 'campus_view' %}" class="inter h6 link-hover">UÝJ barada giňişleýin -></a>
@@ -202,25 +184,19 @@
                                 <span><a href="{% url 'campus_view' %}"
    class="poppins"
    style="font-size: inherit;
-          color: inherit">Campus</a></span>
+          color: inherit">UÝJ</a></span>
                             </div>
                             <div class="col-md-3 col-6 btn rounded-pill end-buttons poppins px-md-3 my-btn">
                                 <span><a href="{% url 'admissions_view' %}"
    class="poppins"
    style="font-size: inherit;
-          color: inherit">Admissions</a></span>
-                            </div>
-                            <div class="col-md-3 col-6 btn rounded-pill end-buttons poppins px-md-3 my-btn">
-                                <span><a href="{% url 'placements_view' %}"
-   class="poppins"
-   style="font-size: inherit;
-          color: inherit">Placements</a></span>
+          color: inherit">Kabul edilişik</a></span>
                             </div>
                             <div class="col-md-3 col-6 btn rounded-pill end-buttons poppins px-md-3 my-btn">
                                 <span><a href="{% url 'about_view' %}"
    class="poppins"
    style="font-size: inherit;
-          color: inherit">About</a></span>
+          color: inherit">Biz barada</a></span>
                             </div>
                         </div>
                     </div>
@@ -232,91 +208,60 @@
                                 <div class="col-11">
                                     <div class="row">
                                         <div class="col-xl-8 col-md-4 col-sm-4 col-12 my-auto mx-auto a">
-                                            <h3 class="footer-h3 text-muted mb-md-0 mb-5 bold-text">MARYTASLAMA</h3>
+                                            <img class="mb-5 mx-auto"
+                                                 width="180rem"
+                                                 src="{% static 'UniWeb/images/logo.png' %}"
+                                                 alt="">
                                         </div>
                                         <div class="col-xl-2 col-md-4 col-sm-4 col-12">
                                             <h6 class="footer-h6 mb-3 mb-lg-4 bold-text text-muted">
-                                                <b>QUICK LINKS</b>
+                                                <b>GYSGA SALGYLAR</b>
                                             </h6>
                                             <ul class="list-unstyled footer-ul">
-                                                <a class="footer-a footer-menu-links" href="{% url 'home' %}">
-                                                    <li>Home</li>
+                                                <a class="footer-a footer-menu-links" href="{% url 'campus_view' %}">
+                                                    <li>UÝJ</li>
                                                 </a>
-                                                <a class="footer-a footer-menu-links" href="{% url 'careers_view' %}">
-                                                    <li>Careers</li>
-                                                </a>
-                                                <a class="footer-a footer-menu-links" href="{% url 'developers_view' %}">
-                                                    <li>Developers</li>
+                                                <a class="footer-a footer-menu-links" href="{% url 'admissions_view' %}">
+                                                    <li>Kabul edilişik</li>
                                                 </a>
                                                 <a class="footer-a footer-menu-links" href="{% url 'about_view' %}">
-                                                    <li>About</li>
+                                                    <li>Biz barada</li>
                                                 </a>
                                             </ul>
                                         </div>
                                         <div class="col-xl-2 col-md-4 col-sm-4 col-12">
                                             <h6 class="footer-h6 mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5">
-                                                <b>ADDRESS</b>
+                                                <b>SALGY</b>
                                             </h6>
-                                            <p class="footer-p mb-1">605, RATAN ICON BUILDING</p>
-                                            <p class="footer-p">SEAWOODS SECTOR</p>
+                                            <p class="footer-p mb-1">Mary welaýatynyň Mary şäheri</p>
+                                            <p class="footer-p">Galkynyş köçesi</p>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-xl-8 col-md-4 col-sm-4 col-auto my-md-0 mt-5 order-sm-1 order-3 align-self-end">
-                                            <p class="footer-p social text-muted mb-0 pb-0 bold-text">
-                                                <span class="mx-2"
-                                                      onclick="window.location='#facebook_link'"
-                                                      style="cursor: pointer"><i class="fa fa-facebook"
-   aria-hidden="true"
-   data-bs-toggle="tooltip"
-   data-bs-placement="bottom"
-   title="Visit our Facebook page"></i></span>
-                                                <span class="mx-2"
-                                                      onclick="window.location='#linkedIn_link'"
-                                                      style="cursor: pointer"><i class="fa fa-linkedin-square"
-   aria-hidden="true"
-   data-bs-toggle="tooltip"
-   data-bs-placement="bottom"
-   title="Visit our LinkedIn"></i></span>
-                                                <span class="mx-2"
-                                                      onclick="window.location='#twitter_link'"
-                                                      style="cursor: pointer"><i class="fa fa-twitter"
-   aria-hidden="true"
-   data-bs-toggle="tooltip"
-   data-bs-placement="bottom"
-   title="Visit our Twitter"></i></span>
-                                                <span class="mx-2"
-                                                      onclick="window.location='#instagram_link'"
-                                                      style="cursor: pointer"><i class="fa fa-instagram"
-   aria-hidden="true"
-   data-bs-toggle="tooltip"
-   data-bs-placement="bottom"
-   title="Visit our Instagram"></i></span>
-                                            </p>
-                                            <small class="rights">
-                                                <span>&#174;</span>
-                                                All Rights Reserved.
-                                                <br>
-                                                Made with <i class="fa fa-coffee" aria-hidden="true"></i> by Sarvesh Rane.
-                                            </small>
-                                        </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
-                                            <h6 class="footer-h6 mt-55 mt-2 text-muted bold-text">
-                                                <b>COLLEGE EMAIL</b>
-                                            </h6>
-                                            <small><span><i class="fa fa-envelope" aria-hidden="true"></i>email@gmail.com</span></small>
-                                        </div>
-                                        <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end ">
-                                            <h6 class="footer-h6 text-muted bold-text">
-                                                <b>CONTACT NUMBER</b>
-                                            </h6>
-                                            <small><span><i class="fa fa-phone" aria-hidden="true"></i></span>1234567890</small>
-                                        </div>
+                                        </p>
+                                        <small class="rights">
+                                            <span>&#174; 2024</span>
+                                            Ähli hukuklar goralan.
+                                        </small>
+                                    </div>
+                                    <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-1 align-self-end ">
+                                        <h6 class="footer-h6 mt-55 mt-2 text-muted bold-text">
+                                            <b>INSTITUTYŇ E-MAIL'Y</b>
+                                        </h6>
+                                        <small><span><i class="fa fa-envelope" aria-hidden="true"></i> marytaslama@gmail.com</span></small>
+                                    </div>
+                                    <div class="col-xl-2 col-md-4 col-sm-4 col-auto order-2 align-self-end ">
+                                        <h6 class="footer-h6 text-muted bold-text">
+                                            <b>HABARLAŞMAK ÜÇIN</b>
+                                        </h6>
+                                        <small><span><i class="fa fa-phone" aria-hidden="true"></i></span> +993 61 000000</small>
                                     </div>
                                 </div>
                             </div>
-                        </footer>
-                    </div>
-                </section>
-            </main>
-        {% endblock %}
+                        </div>
+                    </footer>
+                </div>
+            </section>
+        </main>
+    {% endblock %}
