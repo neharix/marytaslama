@@ -112,22 +112,16 @@
             <div class="col-xl-6 col-lg-12 col-12 image-companion">
                 <span class="sub-gradient-text">Umumu ýaşaýyş jaýlary</span>
                 <br>
-                <span class="medium-inter"> UÝJ-lar talyplar bilen bilelikde arassa, rahat we durnukly ýagdaýda saklanylýar</span>
+                <span class="medium-inter">UÝJ-lar talyplar bilen bilelikde arassa, rahat we durnukly ýagdaýda saklanylýar</span>
                 <div class="thick-gradient-line"></div>
                 <div class="container p-0 ms-2">
                     <div class="row glass-container wide-card-small">
-                        <div class="col-xl-4 col-4 wide-card-items">
-                            <span class="st-main-small">UÝJ №1</span>
-                            <span class="st-sub-small">250</span>
-                        </div>
-                        <div class="col-xl-4 col-4 wide-card-items">
-                            <span class="st-main-small">UÝJ №2</span>
-                            <span class="st-sub-small">250</span>
-                        </div>
-                        <div class="col-xl-4 col-4 wide-card-items">
-                            <span class="st-main-small">UÝJ №3</span>
-                            <span class="st-sub-small">250</span>
-                        </div>
+                        {% for campus in campuses %}
+                            <div class="col-xl-4 col-4 wide-card-items">
+                                <span class="st-main-small">{{ campus.name }}</span>
+                                <span class="st-sub-small">{{ campus.capacity }}</span>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <span class="medium-inter" style="font-weight: 400;margin: 2.4vmin 0;">Ähli UÝJ-lary instituta deň aralykda ýerleşdirilen</span>
@@ -200,5 +194,5 @@
             </div>
         </div>
     </footer>
-    </div>
+</div>
 {% endblock %}

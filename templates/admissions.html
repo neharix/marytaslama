@@ -51,7 +51,7 @@
                         <h2 class="gradient-purple fw-bold poppins">Hünarmen</h2>
                         <p class="text-muted poppins">
                             "MARYTASLAMA" instituty her ýyl hünärmençilik ugruna 400-den gowrak talyp üçin öz gapylaryny açýar.
-                            Talyplygy dalaşgärler "Inženeriýa", "Elektronika", "Hukuk" ugurlary boýunça synag tabşyrýarlar.
+                            Talyplygy dalaşgärler ähli ugurlar boýunça synag tabşyrýarlar.
                         </p>
                         <small class="text-black-50 poppins mt-md-4 fw-light">*Synag 3 takyk dersden ybarat.</small>
                     </div>
@@ -61,142 +61,26 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th scope="col" class="text-secondary poppins" style="font-weight: 500;">Inženeriýa</th>
-                                        <th scope="col" class="text-secondary poppins" style="font-weight: 500;">Elektronika</th>
-                                        <th scope="col" class="text-secondary poppins" style="font-weight: 500;">Hukuk</th>
+                                        {% for faculty_name in faculty_names %}
+                                            <th scope="col" class="text-secondary poppins" style="font-weight: 500;">{{ faculty_name }}</th>
+                                        {% endfor %}
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="text-muted inter">
-                                            1-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">197</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            1-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">167</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            1-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">165</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-muted inter">
-                                            2-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">178</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            2-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">169</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            2-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">161</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-muted inter">
-                                            3-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">182</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            3-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">180</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            3-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">181</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-muted inter">
-                                            4-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">141</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            4-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">160</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            4-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">189</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-muted inter">
-                                            5-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">154</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            5-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">185</div>
-                                        </td>
-                                        <td class="text-muted inter">
-                                            5-nji ýyl
-                                            <br>
-                                            <div class="px-md-2 px-1 rounded-pill small"
-                                                 style="border: 2px solid #7cb0ff;
-                                                        width: fit-content;
-                                                        font-weight: 500">180</div>
-                                        </td>
-                                    </tr>
+                                    {% for count in students_count %}
+                                        <tr>
+                                            {% for number in count %}
+                                                <td class="text-muted inter">
+                                                    {{ forloop.parentloop.counter }}-nji ýyl
+                                                    <br>
+                                                    <div class="px-md-2 px-1 rounded-pill small"
+                                                         style="border: 2px solid #7cb0ff;
+                                                                width: fit-content;
+                                                                font-weight: 500">{{ number }}</div>
+                                                </td>
+                                            {% endfor %}
+                                        </tr>
+                                    {% endfor %}
                                 </tbody>
                             </table>
                         </div>
@@ -205,7 +89,6 @@
             </div>
         </div>
     </div>
-    
     <div class="container-fluid my-container-fluid pb-0 mb-0 justify-content-center">
         <footer class="container-xl">
             <div class="row my-4 justify-content-center py-5">
