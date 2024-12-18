@@ -25,10 +25,10 @@ urlpatterns = [
     # MOSTLY STATIC PAGES
     path("", home_view, name="home"),
     path("admin/", admin.site.urls),
-    path("404", error404_view, name="error404"),
-    path("about", about_view, name="about_view"),
-    path("campus", campus_view, name="campus_view"),
-    path("admissions", admissions_view, name="admissions_view"),
+    path("404/", error404_view, name="error404"),
+    path("about/", about_view, name="about_view"),
+    path("campus/", campus_view, name="campus_view"),
+    path("admissions/", admissions_view, name="admissions_view"),
 ]
 
 

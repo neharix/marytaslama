@@ -1,6 +1,21 @@
 from django.contrib import admin
+from django.contrib.auth.models import Group, User
 
 from .models import *
+
+admin.site.unregister(User)
+admin.site.unregister(Group)
+
+admin.site.register(MainPageContent)
+admin.site.register(AdmissionsPage)
+admin.site.register(AboutPage)
+admin.site.register(InfoColumn)
+admin.site.register(AboutInfoColumn)
+admin.site.register(CarouselImage)
+
+admin.site.register(CampusPage)
+admin.site.register(CampusFirstInfoColumn)
+admin.site.register(CampusSecondInfoColumn)
 
 
 @admin.register(Campus)

@@ -44,47 +44,35 @@
     <div class="conatiner-fluid top-fluid-container">
         <div class="container-xl">
             <div class="container-lg hero-heading px-0">
-                <span class="gradient-heading">Talyplaryň ýaşaýyş toplumy</span>
+                <span class="gradient-heading">{{ page_data.first_header }}</span>
             </div>
             <div class="container-lg heading-text-normal">
-                <span>Işjeň, döredijilikli, ökde adamlaryň bilelikde okaýan, öwrenýän, ýaşaýan ýeri</span>
+                <span>{{ page_data.first_sub_header }}</span>
             </div>
             <div class="container-lg">
                 <div class="row justify-content-center small-cards-all">
-                    <div class="col-4 small-cards glass-container">
-                        <span class="st-main">Demirýol</span>
-                        <span class="st-sub">2.3km</span>
-                    </div>
-                    <div class="col-4 small-cards glass-container">
-                        <span class="st-main">Awtobus duralgasy</span>
-                        <span class="st-sub">100m</span>
-                    </div>
-                    <div class="col-4 small-cards glass-container">
-                        <span class="st-main">Meýdany</span>
-                        <span class="st-sub">120 000 m<sup>2</sup></span>
-                    </div>
+                    {% for card in page_data.first_info_columns_block.all %}
+                        <div class="col-4 small-cards glass-container">
+                            <span class="st-main">{{ card.expression }}</span>
+                            <span class="st-sub">{{ card.value }}</span>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
         <div class="container-xl my-content-container">
-            <div class="container-lg gradient-heading px-0">Bilesigelijiligiňize öý</div>
+            <div class="container-lg gradient-heading px-0">{{ page_data.second_header }}</div>
             <div class="container-lg heading-text-normal">
-                <span>Bu ýerde institutyň dürli toparlaryna degişli adamlaryň arasynda hyzmatdaşlyk we täzelik döretmäge, innowasiýa we taslama döretmäge giň mümkinçilik berilýär.</span>
+                <span>{{ page_data.second_sub_header }}</span>
             </div>
             <div class="container-lg mb-5">
                 <div class="row justify-content-center glass-container wide-card-main">
-                    <div class="col-4 wide-cards">
-                        <span class="st-main">Ylmy iş üstünlikleri</span>
-                        <span class="st-sub">6-njy (Döwlet)</span>
-                    </div>
-                    <div class="col-4 wide-cards">
-                        <span class="st-main">Sport üstünlikleri</span>
-                        <span class="st-sub">2-nji (Welaýat)</span>
-                    </div>
-                    <div class="col-4 wide-cards">
-                        <span class="st-main">Sungat üstünlikleri</span>
-                        <span class="st-sub">3-nji (Döwlet)</span>
-                    </div>
+                    {% for card in page_data.second_info_columns_block.all %}
+                        <div class="col-4 wide-cards">
+                            <span class="st-main">{{ card.expression }}</span>
+                            <span class="st-sub">{{ card.value }}</span>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -92,15 +80,14 @@
     <div class="container-fluid my-content-container-2">
         <div class="row">
             <div class="col-xl-6 col-lg-12 col-12 image-companion">
-                <span class="sub-gradient-text">Ýaşyla bürenen seýilgähler</span>
+                <span class="sub-gradient-text">{{ page_data.first_thumb_header }}</span>
                 <br>
-                <span class="medium-inter">Biziň UÝJ toplumymyzda 250-den gowrak agaç ösdürilýär</span>
+                <span class="medium-inter">{{ page_data.first_thumb_sub_header }}</span>
                 <div class="thick-gradient-line"></div>
-                <span class="medium-inter" style="font-weight: 400;margin: 24px 0;">Meýletinçi talyplar seýilgähiň ösümliklerine we agaçlaryna yzygiderli seredýär</span>
             </div>
             <div class="col-xl-6 col-lg-12 col-12">
                 <div class="glass-container image-container-fix">
-                    <img src="{% static 'UniWeb/images/campus.png' %}"
+                    <img src="/media/{{ page_data.first_thumb_image }}"
                          alt="campus"
                          class="img-fluid">
                 </div>
@@ -110,9 +97,9 @@
     <div class="container-fluid my-content-container-2">
         <div class="row">
             <div class="col-xl-6 col-lg-12 col-12 image-companion">
-                <span class="sub-gradient-text">Umumu ýaşaýyş jaýlary</span>
+                <span class="sub-gradient-text">{{ page_data.second_thumb_header }}</span>
                 <br>
-                <span class="medium-inter">UÝJ-lar talyplar bilen bilelikde arassa, rahat we durnukly ýagdaýda saklanylýar</span>
+                <span class="medium-inter">{{ page_data.second_thumb_sub_header }}</span>
                 <div class="thick-gradient-line"></div>
                 <div class="container p-0 ms-2">
                     <div class="row glass-container wide-card-small">
@@ -124,11 +111,10 @@
                         {% endfor %}
                     </div>
                 </div>
-                <span class="medium-inter" style="font-weight: 400;margin: 2.4vmin 0;">Ähli UÝJ-lary instituta deň aralykda ýerleşdirilen</span>
             </div>
             <div class="col-xl-6 col-lg-12 col-12">
                 <div class="glass-container image-container-fix">
-                    <img src="{% static 'UniWeb/images/hostel.jpg' %}"
+                    <img src="/media/{{ page_data.second_thumb_image }}"
                          alt="hostel"
                          class="img-fluid">
                 </div>
